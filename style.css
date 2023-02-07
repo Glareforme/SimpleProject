@@ -11,12 +11,12 @@ body {
     font-weight: bold;
 }
 
-body::after{
+body::after {
     content: "";
     background: rgb(39, 39, 38);
     position: absolute;
     z-index: 1;
-    opacity: .8 ;
+    opacity: .8;
     top: 0;
     left: 0;
     height: 100%;
@@ -34,16 +34,13 @@ a {
     color: inherit;
 }
 
-.wel-mess{
-    padding-left: 9%;
+.wel-mess {
+    padding-top: 0.5em;
+    padding-left: 4%;
     position: relative;
     z-index: 2;
     font-size: 5em;
     color: bisque;
-}
-
-.header::after{
-    
 }
 
 .navig {
@@ -59,7 +56,7 @@ a {
     display: flex;
     height: 100%;
     align-items: center;
-    flex-grow: 0.3;
+    flex-grow: 0.7;
 }
 
 .myLogo a {
@@ -68,8 +65,8 @@ a {
     align-items: center;
 }
 
-.git-profile{
-    padding-left: 5%;
+.git-profile {
+
 }
 
 .git-profile a {
@@ -155,4 +152,28 @@ a {
     height: 2000px;
     width: 200px;
     background-color: black;
+}
+
+.nav-collapse {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.collapse-icon{
+    display: none;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .nav-list{
+        display: none;
+    }
+
+    .collapse-icon{
+        display: inline-block;
+        font-size: inherit;
+        height: 100%;
+        vertical-align: -0.125em;
+        cursor: pointer;
+    }
 }
