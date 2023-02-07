@@ -1,7 +1,27 @@
 body {
+    padding-top: 1em;
+    height: 100vh;
+    background-image: url(Screenshot_3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
     margin: 0;
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
+}
+
+body::after {
+    content: "";
+    background: rgb(39, 39, 38);
+    position: absolute;
+    z-index: 1;
+    opacity: .8;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 500ms ease;
 }
 
 ul {
@@ -14,49 +34,39 @@ a {
     color: inherit;
 }
 
-.header {
-    height: 100vh;
-    background-image: url(Screenshot_3.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    background-attachment: fixed;
-}
-
-.header::after{
-    content: "";
-    background: rgb(39, 39, 38);
-    position: absolute;
-    z-index: 1;
-    opacity: .8 ;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transition: all 500ms ease;
+.wel-mess {
+    padding-top: 0.5em;
+    padding-left: 4%;
+    position: relative;
+    z-index: 2;
+    font-size: 5em;
+    color: bisque;
 }
 
 .navig {
+    flex-wrap: wrap;
     position: relative;
     z-index: 2;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 70px;
+    margin-inline: 1%;
 }
 
 .myLogo {
     display: flex;
     height: 100%;
     align-items: center;
-    flex-grow: 0.3;
-    margin: 1%;
+    flex-grow: 0.7;
 }
 
 .myLogo a {
     display: flex;
     height: 100%;
     align-items: center;
+}
+
+.git-profile {
+
 }
 
 .git-profile a {
@@ -76,7 +86,6 @@ a {
 
 .nav-list {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -84,7 +93,6 @@ a {
 }
 
 .nav-list li {
-    margin: 1%;
     display: flex;
     font-size: 25px;
     transition: all 500ms ease;
@@ -92,7 +100,6 @@ a {
 
 .head-nav-list {
     position: relative;
-    margin-left: 10%;
     transition: all 500ms ease;
 }
 
@@ -131,7 +138,6 @@ a {
 
 .nav-list li:nth-child(3) {
     color: orange;
-
 }
 
 .nav-list li:nth-child(4) {
@@ -142,9 +148,32 @@ a {
     color: rgb(20, 141, 255);
 }
 
-
 .site-body {
     height: 2000px;
     width: 200px;
     background-color: black;
+}
+
+.nav-collapse {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.collapse-icon{
+    display: none;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .nav-list{
+        display: none;
+    }
+
+    .collapse-icon{
+        display: inline-block;
+        font-size: inherit;
+        height: 100%;
+        vertical-align: -0.125em;
+        cursor: pointer;
+    }
 }
